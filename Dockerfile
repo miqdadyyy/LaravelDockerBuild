@@ -2,7 +2,7 @@ FROM composer:1.9 as builder
 
 WORKDIR /app
 
-COPY composer.* .
+COPY composer.* ./
 
 RUN composer install
 
