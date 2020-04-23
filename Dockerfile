@@ -16,4 +16,10 @@ COPY . .
 
 COPY public/* /var/www/html/
 
+COPY .env.example .env
+
+RUN chown www-data:www-data ./ -R
+
+ENV APP_NAME 
+
 EXPOSE 80
