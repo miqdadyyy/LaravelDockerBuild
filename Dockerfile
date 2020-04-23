@@ -14,6 +14,6 @@ COPY --from=builder /app/vendor /var/www/vendor
 
 COPY . .
 
-COPY public/* /var/www/html
+COPY public/* /var/www/html/
 
 
