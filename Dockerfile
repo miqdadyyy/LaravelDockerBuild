@@ -16,4 +16,4 @@ COPY . .
 
 COPY public/* /var/www/html/
 
-
+EXPOSE 80
