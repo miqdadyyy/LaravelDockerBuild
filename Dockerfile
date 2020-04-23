@@ -6,7 +6,7 @@ COPY composer.* ./
 
 RUN composer install
 
-FROM php7.3-apache
+FROM php:7.3-apache
 
 WORKDIR /var/www/
 
@@ -14,6 +14,6 @@ COPY --from=builder /app/vendor /var/www/vendor
 
 COPY . .
 
-COPY public /var/www/html
+COPY public/* /var/www/html
 
 
