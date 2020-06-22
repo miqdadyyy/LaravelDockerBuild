@@ -26,3 +26,4 @@ jobs:
           source_dir: 'routes'
           s3_region: sgp1
           s3_host: digitaloceanspaces.com
+          destination_dir: assets
