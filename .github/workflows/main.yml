@@ -6,9 +6,8 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    tags:
+      - v*
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,4 +25,4 @@ jobs:
           source_dir: 'routes'
           s3_region: sgp1
           s3_host: digitaloceanspaces.com
-          destination_dir: assets/
+          destination_dir: 'assets/${GITHUB_REF/refs\/tags\//}'
