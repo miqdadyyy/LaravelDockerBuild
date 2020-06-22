@@ -18,10 +18,10 @@ jobs:
     steps:
       - name: Upload Action
         id: upload
-        uses: miqdadyyy/upload-s3-action
+        uses: 'miqdadyyy/upload-s3-action@v1'
         with:
           s3_key_id: ${{ secrets.S3_KEY_ID }}
-          s3_secret_access_key: ${{ secrets.S3_SECRET_ACCESS_KEY}}
+          s3_secret_access_key: ${{ secrets.S3_SECRET_ACCESS_KEY }}
           s3_bucket: ${{ secrets.S3_BUCKET }}
           source_dir: 'routes'
           s3_region: sgp1
